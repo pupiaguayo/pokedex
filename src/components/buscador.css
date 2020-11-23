@@ -1,0 +1,36 @@
+.buscador {
+  display: flex;
+  margin: 0.625em auto;
+  justify-content: space-around;
+  align-items: center;
+}
+.buscador h1 {
+  font-size: 1.625em;
+}
+.buscador input {
+  border-radius: 10px;
+  outline: none;
+  width: 7em;
+  border: 1px solid #af0404;
+}
+.buscador button {
+  background-color: #af0404;
+  color: #ebeb1a;
+  outline: none;
+  border: none;
+  margin-left: 0.1875em;
+  border-radius: 6px;
+  width: 4em;
+}
+.tarjetaBusqueda {
+  width: 13em;
+  height: auto;
+  border-radius: 5px;
+  background-color: #af0404;
+  margin-left: 10em;
+  color: #ebeb1a;
+  text-align: center;
+}
+.tarjetaBusqueda p {
+  font-size: 0.9em;
+}

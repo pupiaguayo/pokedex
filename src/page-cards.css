@@ -1,0 +1,5 @@
+.resultado {
+  display: flex;
+  margin: 0.625em auto;
+  align-items: center;
+}

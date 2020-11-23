@@ -1,0 +1,36 @@
+.tarjeta {
+  display: flex;
+  border: solid 0.125em rgb(165, 0, 0);
+  width: 9.375em;
+  height: auto;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  margin: 0.625em auto;
+  border-radius: 0.625em;
+  box-shadow: 0.625em 0.3125em 0.3125em rgb(214, 214, 214);
+}
+.imgCard {
+  height: 6.25em;
+  width: 6.25em;
+}
+.titleCard {
+  font-size: 1.5em;
+  width: 100%;
+}
+.habilidades {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.habilidades p {
+  font-size: 0.875em;
+  color: white;
+  margin: 0.25em;
+  padding: 0.125em;
+  background-color: rgb(165, 0, 0);
+  border-radius: 0.25em;
+}
+.tarjeta:hover {
+  box-shadow: 0.625em 0.3125em 0.3125em rgb(78, 78, 78);
+}

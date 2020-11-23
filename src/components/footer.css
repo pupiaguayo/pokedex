@@ -1,0 +1,8 @@
+.footer {
+  margin: 3.125em auto;
+  /* background-color: #af0404; */
+  color: #af0404;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

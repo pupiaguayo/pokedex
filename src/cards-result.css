@@ -1,0 +1,42 @@
+.pokemonElegido {
+  display: flex;
+  margin: 0.625em auto;
+  justify-content: space-around;
+  align-items: center;
+}
+.imagenElegido {
+  text-align: center;
+  margin-right: 10em;
+}
+.imagenElegido h1 {
+  font-size: 2em;
+  text-transform: uppercase;
+}
+.imagenElegido img {
+  object-fit: contain;
+  width: 12.5em;
+  height: 12.5em;
+}
+.atributos {
+  width: 13em;
+  height: auto;
+  border-radius: 5px;
+  background-color: #af0404;
+  color: #ebeb1a;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0.6em 0.3em 0.3em rgb(214, 214, 214);
+}
+.atributos:hover {
+  box-shadow: 0.625em 0.3125em 0.3125em rgb(187, 187, 187);
+}
+.atributos h2 {
+  font-size: 1.25em;
+  width: 100%;
+  text-transform: uppercase;
+}
+.atributos p {
+  width: 50%;
+  font-size: 0.9em;
+}

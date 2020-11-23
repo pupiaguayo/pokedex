@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap");
+body {
+  background-color: #fafafa;
+  font-family: "Kanit", sans-serif;
+}
+/*MEDIA QUERIES 995PX*/
+@media (max-width: 995px) {
+  body {
+    font-size: 14px;
+  }
+}
+/*MEDIA QUERIES 767PX*/
+@media (max-width: 767.98px) {
+  body {
+    font-size: 12px;
+  }
+}
+/*MEDIA QUERIES 575PX*/
+@media (max-width: 575.98px) {
+  body {
+    font-size: 10px;
+  }
+}

@@ -3,7 +3,13 @@ import "./page-cards.css";
 import PokeCard from "./components/pokeCard.js";
 class PageCard extends React.Component {
   state = {
-    poke: [],
+    poke: [
+      {
+        species: {
+          name: "",
+        },
+      },
+    ],
   };
   componentDidMount() {
     this.fetchData(`https://pokeapi.co/api/v2/pokemon?limit=21`);
@@ -18,7 +24,7 @@ class PageCard extends React.Component {
       arr.push(pokemones);
     });
     this.setState({
-      poke: [arr],
+      poke: arr,
     });
     console.log(arr, "ApiContenido");
   };
@@ -27,7 +33,7 @@ class PageCard extends React.Component {
       <React.Fragment>
         <div className="row">
           {this.state.poke.map((item, i) => {
-            return <PokeCard nombre={item.id} />;
+            return <PokeCard nombre={item.species.name} key={i} />;
           })}
         </div>
       </React.Fragment>

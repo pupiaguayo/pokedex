@@ -3,13 +3,8 @@ import "./page-cards.css";
 import PokeCard from "./components/pokeCard.js";
 class PageCard extends React.Component {
   state = {
-    poke: [
-      {
-        species: {
-          name: "",
-        },
-      },
-    ],
+    pokemon: [],
+    pokemonId: [],
   };
   componentDidMount() {
     this.fetchData(`https://pokeapi.co/api/v2/pokemon?limit=21`);
@@ -18,22 +13,32 @@ class PageCard extends React.Component {
     const arr = [];
     const response = await fetch(url);
     const data = await response.json();
+    this.setState({
+      pokemon: data.results,
+    });
+    console.log(data);
     data.results.map(async (item) => {
       const resultados = await fetch(item.url);
-      const pokemones = await resultados.json();
-      arr.push(pokemones);
+      arr.push(await resultados.json());
+      this.setState({
+        pokemonId: arr,
+      });
+      console.log(arr);
     });
-    this.setState({
-      poke: arr,
-    });
-    console.log(arr, "ApiContenido");
   };
   render() {
     return (
       <React.Fragment>
         <div className="row">
-          {this.state.poke.map((item, i) => {
-            return <PokeCard nombre={item.species.name} key={i} />;
+          {this.state.pokemonId.map((item, i) => {
+            return (
+              <PokeCard
+                img={item.sprites.other.dream_world.front_default}
+                nombre={item.name.toUpperCase()}
+                habUno={item.types[0].type.name.toUpperCase()}
+                key={i}
+              />
+            );
           })}
         </div>
       </React.Fragment>

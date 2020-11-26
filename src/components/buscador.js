@@ -4,10 +4,14 @@ class Buscador extends React.Component {
   state = {
     busqueda: "",
   };
+  handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Yei");
+  };
   render() {
     return (
       <React.Fragment>
-        <div className="buscador">
+        <form className="buscador" name="form" onSubmit={this.handleSubmit}>
           <div className="input">
             <h1>Nombre</h1>
             <input
@@ -17,12 +21,12 @@ class Buscador extends React.Component {
               onChange={this.props.onChange}
               name="Buscador"
             />
-            <button>Buscar</button>
+            <button type="submit">Buscar</button>
           </div>
           <div className="tarjetaBusqueda">
             <p>Busca a tu pokemon favorito ingresando su nombre </p>
           </div>
-        </div>
+        </form>
       </React.Fragment>
     );
   }

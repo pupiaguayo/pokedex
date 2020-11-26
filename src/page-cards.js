@@ -1,8 +1,10 @@
 import React from "react";
 import "./page-cards.css";
 import PokeCard from "./components/pokeCard.js";
+import Loading from "./components/Loading.js";
 class PageCard extends React.Component {
   state = {
+    loading: false,
     pokemon: [],
     pokemonId: [],
   };
@@ -10,6 +12,9 @@ class PageCard extends React.Component {
     this.fetchData(`https://pokeapi.co/api/v2/pokemon?limit=21`);
   }
   fetchData = async (url) => {
+    this.setState({
+      loading: true,
+    });
     const arr = [];
     const response = await fetch(url);
     const data = await response.json();
@@ -21,6 +26,7 @@ class PageCard extends React.Component {
       const resultados = await fetch(item.url);
       arr.push(await resultados.json());
       this.setState({
+        loading: false,
         pokemonId: arr,
       });
       console.log(arr);
@@ -29,6 +35,7 @@ class PageCard extends React.Component {
   render() {
     return (
       <React.Fragment>
+        {this.state.loading && <Loading />}
         <div className="row">
           {this.state.pokemonId.map((item, i) => {
             return (

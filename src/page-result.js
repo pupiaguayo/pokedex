@@ -13,7 +13,6 @@ class PageResult extends React.Component {
         <div className="container">
           <Buscador></Buscador>
           <CardResult></CardResult>
-          <OtrosPokemones></OtrosPokemones>
         </div>
         <Footer></Footer>
       </React.Fragment>

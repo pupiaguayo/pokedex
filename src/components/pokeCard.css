@@ -33,4 +33,5 @@
 }
 .tarjeta:hover {
   box-shadow: 0.625em 0.3125em 0.3125em rgb(78, 78, 78);
+  cursor: pointer;
 }

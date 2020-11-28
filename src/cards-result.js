@@ -1,13 +1,15 @@
 import React from "react";
 import PokeCardEleg from "./components/pokeCardElegida.js";
+import Loading from "./components/Loading.js";
 import OtrosPokemones from "./components/otros-pokemones.js";
 class CardResult extends React.Component {
   state = {
     loading: false,
     pokemonResultado: [],
   };
-  componentDidMount() {
-    this.fetchData(`https://pokeapi.co/api/v2/pokemon/ditto`);
+  componentWillReceiveProps(e) {
+    let termino = e.busqueda;
+    this.fetchData("https://pokeapi.co/api/v2/pokemon/" + termino + "");
   }
   fetchData = async (url) => {
     this.setState({
@@ -16,6 +18,7 @@ class CardResult extends React.Component {
     const response = await fetch(url);
     const data = await response.json();
     this.setState({
+      loading: false,
       pokemonResultado: [data],
     });
     console.log(data, "");
@@ -23,6 +26,7 @@ class CardResult extends React.Component {
   render() {
     return (
       <React.Fragment>
+        {this.state.loading && <Loading />}
         {this.state.pokemonResultado.map((item, i) => {
           return (
             <PokeCardEleg

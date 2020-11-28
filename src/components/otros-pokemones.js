@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PokeCard from "./pokeCard.js";
 import "./otrosPokemones.css";
+import { Link } from "react-router-dom";
 class OtrosPokemones extends React.Component {
   state = {
     loading: false,
@@ -8,7 +9,7 @@ class OtrosPokemones extends React.Component {
     pokemonId: [],
   };
   componentDidMount() {
-    this.fetchData(`https://pokeapi.co/api/v2/pokemon?limit=3`);
+    this.fetchData(`https://pokeapi.co/api/v2/pokemon?limit=21`);
   }
   fetchData = async (url) => {
     this.setState({
@@ -36,14 +37,15 @@ class OtrosPokemones extends React.Component {
       <React.Fragment>
         <div className="container otrasTarjetas">
           <div className="row">
-            <h1>Otros Pokemomes</h1>
+            <h2>Otros Pokemomes</h2>
           </div>
           <div className="row">
-            {this.state.pokemonId.map((item, i) => {
+            {this.state.pokemonId.slice(0, 6).map((item, i) => {
               return (
                 <PokeCard
                   img={item.sprites.other.dream_world.front_default}
-                  habUno={item.name.toUpperCase()}
+                  nombre={item.name}
+                  habUno={item.types[0].type.name.toUpperCase()}
                   key={i}
                 />
               );

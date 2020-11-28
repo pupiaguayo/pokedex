@@ -1,0 +1,41 @@
+.buscador {
+  display: flex;
+  margin: 0.625em auto;
+  justify-content: space-around;
+  align-items: center;
+}
+.input {
+  width: 14em;
+  justify-content: center;
+}
+.input h1 {
+  font-size: 1.3em;
+}
+.input input {
+  border-radius: 10px;
+  outline: none;
+  width: 6em;
+  border: 1px solid #af0404;
+  margin-right: 0.5em;
+}
+.input button {
+  background-color: #af0404;
+  color: #ebeb1a;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  width: 5em;
+  font-size: 0.6em;
+}
+.tarjetaBusqueda {
+  width: 13em;
+  height: auto;
+  border-radius: 5px;
+  background-color: #af0404;
+  margin-left: 8em;
+  color: #ebeb1a;
+  text-align: center;
+}
+.tarjetaBusqueda p {
+  font-size: 0.9em;
+}

@@ -10,7 +10,7 @@ class PokeCardEleg extends React.Component {
         </div>
         <div className="atributos">
           <h2>ATRIBUTOS</h2>
-          <p>PESO: {this.props.atributoUno} KG</p>
+          <p>PESO: {this.props.atributoUno}</p>
           <p>ALTURA: {this.props.atributoDos} CM</p>
           <p>TIPO: {this.props.atributoTres}</p>
         </div>

@@ -41,7 +41,7 @@ class PageCard extends React.Component {
             return (
               <PokeCard
                 img={item.sprites.other.dream_world.front_default}
-                nombre={item.name.toUpperCase()}
+                nombre={item.name}
                 habUno={item.types[0].type.name.toUpperCase()}
                 key={i}
               />

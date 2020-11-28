@@ -10,6 +10,9 @@
   border-radius: 0.625em;
   box-shadow: 0.625em 0.3125em 0.3125em rgb(214, 214, 214);
 }
+.tarjeta h1 {
+  color: rgb(66, 66, 66);
+}
 .imgCard {
   height: 6.25em;
   width: 6.25em;
@@ -32,6 +35,6 @@
   border-radius: 0.25em;
 }
 .tarjeta:hover {
-  box-shadow: 0.625em 0.3125em 0.3125em rgb(78, 78, 78);
+  box-shadow: 0.625em 0.3125em 0.3125em rgb(46, 46, 46);
   cursor: pointer;
 }

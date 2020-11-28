@@ -1,6 +1,6 @@
 .pokemonElegido {
   display: flex;
-  margin: 0.625em auto;
+  margin: 0.5em auto 3.8em auto;
   justify-content: space-around;
   align-items: center;
 }
@@ -9,16 +9,17 @@
   margin-right: 10em;
 }
 .imagenElegido h1 {
-  font-size: 2em;
+  font-size: 1.6em;
   text-transform: uppercase;
 }
 .imagenElegido img {
   object-fit: contain;
-  width: 12.5em;
-  height: 12.5em;
+  width: 11em;
+  height: 11em;
+  margin-bottom: 0.3em;
 }
 .atributos {
-  width: 13em;
+  width: 12em;
   height: auto;
   border-radius: 5px;
   background-color: #af0404;

@@ -1,7 +1,14 @@
 .otrasTarjetas {
   text-align: center;
 }
-.otrasTarjetas h1 {
-  width: 100%;
+.otrasTarjetas h2 {
   font-size: 2em;
+  width: 100%;
+}
+
+.otrasTarjetas h1 {
+  font-size: 1em;
+}
+.otrasTarjetas p {
+  font-size: 0.7em;
 }
